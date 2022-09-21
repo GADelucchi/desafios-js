@@ -7,21 +7,21 @@ botonRojo.onclick = (event) => mainRojo(event)
 botonVerde.onclick = (event) => mainVerde(event)
 // botonNegro.onclick = () => location.reload()
 
-function textoSad() {
+function textUno() {
     contenedorGral.className = "d-flex flex-column align-items-center justify-content-evenly fs-2"
-    contenedorGral.innerHTML = `<div class="fw-bold text-danger">Ella no te ama</div>
+    contenedorGral.innerHTML = `<div class="fw-bold text-danger">Texto ejemplo botón rojo</div>
                                 <button class="btn btn-dark h-25 w-25" id="btn-negro"">
-                                    INTENTÁ DE NUEVO
+                                    PROBÁ DE NUEVO
                                 </button>`
     let botonNegro = document.getElementById("btn-negro")
     botonNegro.onclick = () => location.reload()
 }
 
-function textoSadTroll() {
+function textDos() {
     contenedorGral.className = "d-flex flex-column align-items-center justify-content-evenly fs-2"
-    contenedorGral.innerHTML = `<div class="fw-bold text-success">Ella aún no te ama, me ama a mí</div>
+    contenedorGral.innerHTML = `<div class="fw-bold text-success">Texto ejemplo botón verde</div>
                                 <button class="btn btn-dark h-25 w-25" id="btn-negro">
-                                    INTENTÁ DE NUEVO
+                                    PROBÁ DE NUEVO
                                 </button>`
     let botonNegro = document.getElementById("btn-negro")
     botonNegro.onclick = () => location.reload()
@@ -30,13 +30,13 @@ function textoSadTroll() {
 function mainRojo() {
     botonRojo.hidden = true
     botonVerde.hidden = true
-    textoSad()
+    textUno()
 
 }
 
 function mainVerde() {
     botonRojo.hidden = true
     botonVerde.hidden = true
-    textoSadTroll()
+    textDos()
 
 }
