@@ -128,7 +128,7 @@ function pintarProductos() {
     contenedorProductos.innerHTML = "";
     productos.forEach((producto) => {
         let column = document.createElement("div");
-        column.className = "col-md-4 mt-3";
+        column.className = "col-md-3 mt-3";
         column.id = `columna-${producto.id}`;
         column.innerHTML = `
             <div class="card">
