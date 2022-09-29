@@ -406,3 +406,8 @@ footer {
 .btn-primary {
     background-color: #4297df;
 }
+
+#textoAlerta {
+    color: red;
+    font-size: 10px;
+}

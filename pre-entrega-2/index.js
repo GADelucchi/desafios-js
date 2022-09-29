@@ -1,8 +1,6 @@
-// Variables de información
+// Variables
 let productos = [];
 let usuario;
-
-// Variables para elementos de autenticación y usuario
 
 let formularioIdentificacion;
 let contenedorIdentificacion;
@@ -10,7 +8,6 @@ let contenedorUsuario;
 let textoUsuario;
 let limpiarStorage;
 
-// Variables para formulario de productos
 let formulario;
 let inputCodigo;
 let inputNombre;
@@ -18,7 +15,9 @@ let inputPrecioCompra;
 let inputPrecioVenta;
 let inputCantidad;
 let contenedorProductos;
+let divCodigo;
 
+// Clases
 class Producto {
     constructor(id, nombre, precioCompra, precioVenta, cantidad) {
         this.id = id;
@@ -29,6 +28,7 @@ class Producto {
     }
 }
 
+// Funciones
 function inicializarElementos() {
     limpiarStorage = document.getElementById("limpiarStorage");
     contenedorUsuario = document.getElementById("contenedorUsuario");
@@ -38,7 +38,7 @@ function inicializarElementos() {
     formularioIdentificacion = document.getElementById(
         "formularioIdentificacion");
     inputUsuario = document.getElementById("inputUsuario");
-
+    divCodigo = document.getElementById("divCodigo")
     formulario = document.getElementById("formulario");
     inputCodigo = document.getElementById("inputCodigo");
     inputNombre = document.getElementById("inputNombreProducto");
@@ -107,6 +107,10 @@ function validarFormulario(event) {
             pintarProductos();
         } else {
             alert("El código ya existe");
+            // divCodigo.innerHTML = `
+            // <label class="form-label fs-3">Código</label>
+            // <input type="text" class="form-control" id="inputCodigo" required />
+            // <p id="textoAlerta">El código ya existe</p>`
         }
     } else {
         alert("Identifíquese antes de agregar un producto");
@@ -193,4 +197,5 @@ function main() {
     obtenerUsuarioStorage();
 }
 
+// Ejecución
 main();
