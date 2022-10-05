@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="REPARACION, APPLE, IPHONE, CELULAR, MACBOOK, IPAD, AIRPODS, COMPRA, APPLEFIX, PRODUCTOS, HERRAMIENTAS, INSUMOS">
+    <meta name="description" content="Mercado de AppleFix Reparaciones; heeramientas, insumos y  más">
+    <link rel="shortcut icon" href="./imgs/logo-sin-fondo.png" type="image/x-icon">
+    <title>AppleFix Reparaciones - Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-sm bg-light fixed-top header">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../../index.html">
+                    <img src="./imgs/logo-sin-fondo.png" alt="Logo" id="picture__logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <img src="./imgs/logo-sin-fondo.png" alt="Logo" id="dropdown__logo">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AppleFix Reparaciones</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Galería</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Cursos</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Remanufacturación</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Reparación</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Software</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Identificación -->
+        <div class="row col-md-12 mt-5">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <button class="btn btn-primary" id="limpiarStorage">
+                    Limpiar Storage
+                </button>
+            </div>
+            <div class="col"></div>
+            <div class="col-md-5">
+                <div id="contenedorUsuario" hidden>
+                    <p class="fs-3" id="textoUsuario">Bienvenido:</p>
+                </div>
+                <div id="contenedorIdentificacion">
+                    <h2 class="fs-1">Identificate</h2>
+                    <form id="formularioIdentificacion">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div>
+                                    <label class="form-label fs-3">Nombre</label>
+                                    <input type="text" class="form-control" id="inputUsuario" required />
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex align-items-end">
+                                <button type="submit" class="btn btn-secondary">
+                                    Ingresar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adhesión de producto -->
+        <div class="row col-md-12">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h3 class="fs-1">Ingrese sus Productos</h3>
+                <form id="formulario">
+                    <div class="mb-3" id="divCodigo">
+                        <label class="form-label fs-3">Código</label>
+                        <input type="text" class="form-control" id="inputCodigo" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fs-3">Producto</label>
+                        <input type="text" class="form-control" id="inputNombreProducto" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fs-3">Precio de compra</label>
+                        <input type="number" class="form-control" id="inputPrecioCompra" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fs-3">Precio de venta</label>
+                        <input type="number" class="form-control" id="inputPrecioVenta" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fs-3">Cantidad</label>
+                        <input type="number" class="form-control" id="inputCantidad" required />
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary fs-3">Agregar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <!-- Productos del array-->
+        <div class="col-md-12">
+            <div id="contenedorProductos" class="row"></div>
+        </div>
+
+        <!-- Productos nativos -->
+        <div class="card card--modifier" id="card--margin-top">
+            <img src="./imgs/pinza.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Pinza Recta</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+
+        <div class="card card--modifier">
+            <img src=" ./imgs/estacion-sugon.png" class="card-img-top" alt="Estación de soldado Sugon 8610DX">
+            <div class="card-body">
+                <h5 class="card-title">Estación de Soldado</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+
+        <div class="card card--modifier">
+            <img src="./imgs/cautin-sugon.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Cautín Nano Sugon</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+
+        <div class="card card--modifier">
+            <img src="./imgs/destornilladores.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Set de Destornilladores</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+
+        <div class="card card--modifier">
+            <img src="./imgs/manta-antiestatica.png" class="card-img-top" alt="Manta antiestática negra">
+            <div class="card-body">
+                <h5 class="card-title">Manta antiestática</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+
+        <div class="card card--modifier">
+            <img src="./imgs/cinta-doble-faz.png" class="card-img-top" alt="Cinta doble faz negra 5mm">
+            <div class="card-body">
+                <h5 class="card-title">Cinta bifaz</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+
+        <div class="card card--modifier">
+            <img src="./imgs/pegamento.png" class="card-img-top" alt="Pegamento T-8000">
+            <div class="card-body">
+                <h5 class="card-title">Pegamento T-8000</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+
+        <div class="card card--modifier">
+            <img src="./imgs/boton-home.png" class="card-img-top" alt="Botón home JCID iPhone 7/7 Plus/8/8 Plus">
+            <div class="card-body">
+                <h5 class="card-title">Botón home</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+
+        <div class="card card--modifier">
+            <img src="./imgs/modulo.png" class="card-img-top" alt="Módulo iPhone 12">
+            <div class="card-body">
+                <h5 class="card-title">Módulos</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+
+        <div class="card card--modifier">
+            <img src="./imgs/bateria.png" class="card-img-top" alt="Batería Ampsentrix iPhone Xs">
+            <div class="card-body">
+                <h5 class="card-title">Baterías</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+
+        <div class="card card--modifier">
+            <img src="./imgs/microscopio.png" class="card-img-top" alt="Microscopio trinocular Relife">
+            <div class="card-body">
+                <h5 class="card-title">Microscopios</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+
+        <div class="card card--modifier">
+            <img src="./imgs/fuente-de-alimentacion.png" class="card-img-top" alt="Fuente de Alimentación Sugon">
+            <div class="card-body">
+                <h5 class="card-title">Fuente de alimentación</h5>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Agregar este producto</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="https://wa.me/+5492216106125" class="footer__link">Contáctanos</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="footer__link">Términos y Condiciones</a>
+                </li>
+                <li class="menu__item">
+                    <p class="footer__link">Copyright © AppleFix Reparaciones</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
