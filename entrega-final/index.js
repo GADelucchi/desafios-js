@@ -17,6 +17,8 @@ let inputCantidad;
 let contenedorProductos;
 let divCodigo;
 
+let botonComprar
+
 let lista
 
 // Clases
@@ -49,6 +51,7 @@ function inicializarElementos() {
     inputCantidad = document.getElementById("inputCantidad");
     contenedorProductos = document.getElementById("contenedorProductos");
     lista = document.getElementById("lista")
+    botonComprar = document.getElementById("btn-buy")
 }
 
 function inicializarEventos() {
@@ -125,10 +128,6 @@ function validarFormulario(event) {
                 icon: 'error',
                 confirmButtonText: 'Cool'
             })
-            // divCodigo.innerHTML = `
-            // <label class="form-label fs-3">Código</label>
-            // <input type="text" class="form-control" id="inputCodigo" required />
-            // <p id="textoAlerta">El código ya existe</p>`
         }
     } else {
         Swal.fire({
@@ -212,11 +211,25 @@ function obtenerUsuarioStorage() {
     }
 }
 
+function clickComprar() {
+    botonComprar.onclick = (event) => mostrarAlert(event)
+}
+
+function mostrarAlert() {
+    Swal.fire({
+        text: `Está seguro de que quiere comprar estos productos?`,
+        icon: `question`,
+        confirmButtonText: `Sí = redireccionarme a API de pago`
+    }
+    )
+}
+
 function main() {
     inicializarElementos();
     inicializarEventos();
     obtenerProductosStorage();
     obtenerUsuarioStorage();
+    clickComprar()
 
     fetch("data.json")
         .then((respuesta) => respuesta.json())

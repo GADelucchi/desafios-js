@@ -5,7 +5,6 @@ let botonNegro
 
 botonRojo.onclick = (event) => mainRojo(event)
 botonVerde.onclick = (event) => mainVerde(event)
-// botonNegro.onclick = () => location.reload()
 
 function textUno() {
     contenedorGral.className = "d-flex flex-column align-items-center justify-content-evenly fs-2"
