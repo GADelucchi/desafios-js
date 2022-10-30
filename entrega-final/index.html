@@ -130,8 +130,9 @@
                         <label class="form-label fs-3">Cantidad</label>
                         <input type="number" class="form-control" id="inputCantidad" required />
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3" id="botones">
                         <button type="submit" class="btn btn-primary fs-3">Agregar</button>
+                        <button type="button" class="btn btn-success fs-3">Comprar</button>
                     </div>
                 </form>
             </div>
@@ -143,8 +144,11 @@
             <div id="contenedorProductos" class="row"></div>
         </div>
 
+        <!-- Productos JSON -->
+        <div id="lista" class="row"></div>
+
         <!-- Productos nativos -->
-        <div class="card card--modifier" id="card--margin-top">
+        <!-- <div class="card card--modifier" id="card--margin-top">
             <img src="./imgs/pinza.png" class="card-img-top" alt="">
             <div class="card-body">
                 <h5 class="card-title">Pinza Recta</h5>
@@ -222,7 +226,7 @@
             <div class="card-footer">
                 <button class="btn btn-primary">Agregar este producto</button>
             </div>
-        </div>
+        </div> -->
 
         <div class="card card--modifier">
             <img src="./imgs/modulo.png" class="card-img-top" alt="Módulo iPhone 12">

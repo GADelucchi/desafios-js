@@ -411,3 +411,8 @@ footer {
     color: red;
     font-size: 10px;
 }
+
+#botones {
+    display: flex;
+    justify-content: space-around;
+}

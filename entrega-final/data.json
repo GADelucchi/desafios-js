@@ -1,0 +1,10 @@
+[
+    {"codigo": 92, "nombre": "Pinza recta", "precioCompra": 500, "precioVenta": 750, "cantidad": 3},
+    {"codigo": 93, "nombre": "Estación de soldado", "precioCompra": 20000, "precioVenta": 30000, "cantidad": 2},
+    {"codigo": 94, "nombre": "Cautín nano Sugon", "precioCompra": 40000, "precioVenta": 60500, "cantidad": 6},
+    {"codigo": 95, "nombre": "Set de destornilladores", "precioCompra": 500, "precioVenta": 750, "cantidad": 20},
+    {"codigo": 96, "nombre": "Manta antiestática", "precioCompra": 800, "precioVenta": 1000, "cantidad": 8},
+    {"codigo": 97, "nombre": "Cinta bifaz", "precioCompra": 40, "precioVenta": 300, "cantidad": 24},
+    {"codigo": 98, "nombre": "Pegamento T-8000", "precioCompra": 100, "precioVenta": 460, "cantidad": 29},
+    {"codigo": 99, "nombre": "Botón home", "precioCompra": 1350, "precioVenta": 2000, "cantidad": 49}
+]

@@ -17,6 +17,8 @@ let inputCantidad;
 let contenedorProductos;
 let divCodigo;
 
+let lista
+
 // Clases
 class Producto {
     constructor(id, nombre, precioCompra, precioVenta, cantidad) {
@@ -46,12 +48,13 @@ function inicializarElementos() {
     inputPrecioVenta = document.getElementById("inputPrecioVenta");
     inputCantidad = document.getElementById("inputCantidad");
     contenedorProductos = document.getElementById("contenedorProductos");
+    lista = document.getElementById("lista")
 }
 
 function inicializarEventos() {
     formulario.onsubmit = (event) => validarFormulario(event);
     // formulario.onsubmit = (event) => {
-        
+
     // }
     formularioIdentificacion.onsubmit = (event) => identificarUsuario(event);
     limpiarStorage.onclick = eliminarStorage;
@@ -109,23 +112,23 @@ function validarFormulario(event) {
             actualizarProductosStorage();
             pintarProductos();
             Toastify({
-                text:"Producto agregado",
-                duration:5000,
-                close:true,
-                gravity:"top",
-                position:"right",
-                stopOnFocus:true,
+                text: "Producto agregado",
+                duration: 5000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
             }).showToast()
         } else {
-            // Swal.fire({
-            //     text: 'El código ya existe',
-            //     icon: 'error',
-            //     confirmButtonText: 'Cool'
-            // })
-            divCodigo.innerHTML = `
-            <label class="form-label fs-3">Código</label>
-            <input type="text" class="form-control" id="inputCodigo" required />
-            <p id="textoAlerta">El código ya existe</p>`
+            Swal.fire({
+                text: 'El código ya existe',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+            })
+            // divCodigo.innerHTML = `
+            // <label class="form-label fs-3">Código</label>
+            // <input type="text" class="form-control" id="inputCodigo" required />
+            // <p id="textoAlerta">El código ya existe</p>`
         }
     } else {
         Swal.fire({
@@ -214,6 +217,39 @@ function main() {
     inicializarEventos();
     obtenerProductosStorage();
     obtenerUsuarioStorage();
+
+    fetch("data.json")
+        .then((respuesta) => respuesta.json())
+        .then((datos) => {
+            datos.forEach((producto) => {
+                const div = document.createElement("div")
+                div.className = "col-md-3 mt-3"
+                div.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                    <p class="card-text">Código:
+                        <b>${producto.codigo}</b>
+                    </p>
+                    <p class="card-text">Nombre:
+                        <b>${producto.nombre}</b>
+                    </p>
+                    <p class="card-text">Precio de compra:
+                        <b>${producto.precioCompra}</b>
+                    </p>
+                    <p class="card-text">Precio de venta:
+                        <b>${producto.precioVenta}</b>
+                    </p>
+                    <p class="card-text">Cantidad:
+                        <b>${producto.cantidad}</b>
+                    </p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-danger" id="botonEliminar-${producto.id}" >Eliminar</button>
+                    </div>
+                </div>`
+            lista.append(div)
+        })
+    })
 }
 
 // Ejecución
